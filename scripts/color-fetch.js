@@ -19,6 +19,7 @@ function ColorFetch() {
   }
 
   this.getFourSchemesAndStore = function() {
+    let styleStorage = this.styleStorage;
     $.when(
       this.getRandomScheme(),
       this.getRandomScheme(),
@@ -29,7 +30,7 @@ function ColorFetch() {
        let arr = [d1, d2, d3, d4];
        arr.forEach((dataset) => {
          let colorArray = dataset[0][0].colors;
-         this.styleStorage.store(colorArray);
+         styleStorage.store(colorArray);
        });
      });
   }

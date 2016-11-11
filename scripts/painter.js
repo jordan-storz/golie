@@ -7,6 +7,8 @@ function Painter() {
 
   let colorScheme = [];
 
+  this.getColorScheme = () => colorScheme;
+
   function clearBackgrounds($cell) {
     $cell.css('background', 'inherit');
   }
@@ -17,8 +19,9 @@ function Painter() {
 
   function grabRandomColor() {
     let length = colorScheme.length;
-    let random = Math.floor(Math.random * length);
-    return colorScheme[random];
+    let random = Math.floor(Math.random() * (length - 1));
+    console.log(colorScheme[random]);
+    return '#' + colorScheme[random];
   }
 
   function process$Cell() {}
@@ -27,11 +30,11 @@ function Painter() {
     let instances = this.instanceStorage.getStorage();
     instances.forEach((instance) => {
       let matrix = instance.lifeMatrix;
-      let color = instance.color;
       matrix.forEach((col, x) => {
         col.forEach((cell, y) => {
           let $cell = this.elementStorage.getElements()[x][y];
           if (cell === 1) {
+            let color = grabRandomColor();
             addBackground($cell, color);
           } else {
             clearBackgrounds($cell);

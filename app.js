@@ -8,3 +8,4 @@ app.gameMaker.initialize();
 app.gameMaker.createInstance();
 app.gameMaker.createInstance();
 // app.runner.run();
+app.colorFetch.getFourSchemesAndStore();

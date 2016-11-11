@@ -14,7 +14,8 @@ function Bootstrap() {
     EnvironmentInfo,
     NeighborCalculator,
     ColorFetch,
-    StyleStorage
+    StyleStorage,
+    StyleManager
   ]
 
   function registerComponents() {
