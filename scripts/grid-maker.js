@@ -34,7 +34,7 @@ function GridMaker() {
     for (var i = 0; i < dimension; i++) {
       let $column = makeColumn();
       for (var j = 0; j < dimension; j++) {
-        let $cell = $(`<div class="cell"></div>`);
+        let $cell = $(`<div class="cell z-depth-3"></div>`);
         apply$CellStyles($cell);
         $column.append($cell);
         this.elementStorage.pushToColumn(i, $cell);
@@ -47,8 +47,7 @@ function GridMaker() {
     var length = $body.width() / dimension;
     return {
       width: length,
-      height: length,
-      border: '0px solid black'
+      height: length
     }
   }
 
