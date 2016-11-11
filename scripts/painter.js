@@ -5,12 +5,20 @@ function Painter() {
     'instanceStorage'
   ];
 
+  let colorScheme = [];
+
   function clearBackgrounds($cell) {
     $cell.css('background', 'inherit');
   }
 
   function addBackground($cell, color) {
     $cell.css('background', color);
+  }
+
+  function grabRandomColor() {
+    let length = colorScheme.length;
+    let random = Math.floor(Math.random * length);
+    return colorScheme[random];
   }
 
   function process$Cell() {}
@@ -32,6 +40,12 @@ function Painter() {
       });
     });
   }
+
+  this.changeColors = function(colorArray) {
+    colorScheme = colorArray;
+  }
+
+
 
 
 

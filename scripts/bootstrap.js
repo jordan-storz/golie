@@ -13,6 +13,8 @@ function Bootstrap() {
     InstanceStorage,
     EnvironmentInfo,
     NeighborCalculator,
+    ColorFetch,
+    StyleStorage
   ]
 
   function registerComponents() {
