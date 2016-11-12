@@ -6,7 +6,9 @@ app.gridMaker.initialize(19);
 app.gridMaker.renderGrid();
 app.gameMaker.initialize();
 app.gameMaker.createInstance();
-
+app.patternFetch.getPatternAndStore().then(() => {
+  app.styleManager.switchPattern();
+});
 app.colorFetch.getFourSchemesAndStore().then(() => {
   app.styleManager.switchColors();
   app.runner.run();
