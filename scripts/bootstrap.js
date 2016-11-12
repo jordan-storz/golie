@@ -16,7 +16,8 @@ function Bootstrap() {
     ColorFetch,
     StyleStorage,
     StyleManager,
-    PatternFetch
+    PatternFetch,
+    GlobalStyles
   ]
 
   function registerComponents() {

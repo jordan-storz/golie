@@ -2,7 +2,8 @@ function Painter() {
 
   this.imports = [
     'elementStorage',
-    'instanceStorage'
+    'instanceStorage',
+    'globalStyles'
   ];
 
   let colorScheme = [];
@@ -10,8 +11,9 @@ function Painter() {
   this.getColorScheme = () => colorScheme;
 
   function clearBackgrounds($cell) {
+    let backgroundColor = this.globalStyles.getBackgroundColor();
     $cell.css({
-      backgroundColor: '#555',
+      backgroundColor: backgroundColor,
       opacity: 1
     });
   }
@@ -42,7 +44,7 @@ function Painter() {
             let color = grabRandomColor();
             addBackground($cell, color);
           } else {
-            clearBackgrounds($cell);
+            clearBackgrounds.apply(this, [$cell]);
           }
         });
       });

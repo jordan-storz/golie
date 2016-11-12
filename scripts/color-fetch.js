@@ -30,7 +30,7 @@ function ColorFetch() {
        let arr = [d1, d2, d3, d4];
        arr.forEach((dataset) => {
          let colorArray = dataset[0][0].colors;
-         styleStorage.store(colorArray);
+         styleStorage.storeColor(colorArray);
        });
      });
   }
