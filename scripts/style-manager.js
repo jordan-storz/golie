@@ -10,4 +10,10 @@ function StyleManager() {
     this.painter.changeColors(next);
   }
 
+  this.switchPattern = function() {
+    let url = this.styleStorage.getStorage();
+    console.log(url);
+    $('body').css('background-image', `url(${url})`);
+  }
+
 }

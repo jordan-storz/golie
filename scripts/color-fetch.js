@@ -8,7 +8,7 @@ function ColorFetch() {
 
   this.getRandomScheme = function() {
     return $.ajax({
-      url: 'http://www.colourlovers.com/api/palettes/random',
+      url: COLOR_ENDPOINT,
       jsonp: 'jsonCallback',
       dataType: 'jsonp',
       data: {
@@ -20,7 +20,7 @@ function ColorFetch() {
 
   this.getFourSchemesAndStore = function() {
     let styleStorage = this.styleStorage;
-    $.when(
+    return $.when(
       this.getRandomScheme(),
       this.getRandomScheme(),
       this.getRandomScheme(),

@@ -7,5 +7,8 @@ app.gridMaker.renderGrid();
 app.gameMaker.initialize();
 app.gameMaker.createInstance();
 app.gameMaker.createInstance();
-// app.runner.run();
-app.colorFetch.getFourSchemesAndStore();
+
+app.colorFetch.getFourSchemesAndStore().then(() => {
+  app.styleManager.switchColors();
+  app.runner.run();
+})

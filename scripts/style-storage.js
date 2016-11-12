@@ -5,6 +5,7 @@ function StyleStorage() {
   ];
 
   let colorArrayStorage = [];
+  let patternStorage;
 
   this.store = function(colorArray) {
     colorArrayStorage.push(colorArray);
@@ -17,5 +18,11 @@ function StyleStorage() {
     }
     return next;
   }
+
+  this.storePattern = function(patternUrl) {
+    patternStorage = patternUrl;
+  }
+
+  this.getStorage = () => patternStorage;
 
 }

@@ -10,17 +10,22 @@ function Painter() {
   this.getColorScheme = () => colorScheme;
 
   function clearBackgrounds($cell) {
-    $cell.css('background', 'inherit');
+    $cell.css({
+      backgroundColor: '#555',
+      opacity: 1
+    });
   }
 
   function addBackground($cell, color) {
-    $cell.css('background', color);
+    $cell.css({
+      backgroundColor: color,
+      opacity: 0.5
+    });
   }
 
   function grabRandomColor() {
     let length = colorScheme.length;
     let random = Math.floor(Math.random() * (length - 1));
-    console.log(colorScheme[random]);
     return '#' + colorScheme[random];
   }
 
