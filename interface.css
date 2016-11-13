@@ -20,5 +20,9 @@ a.btn-floating {
 }
 
 .red.darken-3#pause-btn:hover {
-  background-color: #e53935 !important; 
+  background-color: #e53935 !important;
+}
+
+.red.darken-3#pause-btn: {
+  background-color: #e53935 !important;
 }

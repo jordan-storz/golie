@@ -11,5 +11,5 @@ app.patternFetch.getPatternAndStore().then(() => {
 });
 app.colorFetch.getFourSchemesAndStore().then(() => {
   app.styleManager.switchColors();
-  // app.runner.run();
+  app.runner.run();
 })

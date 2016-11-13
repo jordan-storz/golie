@@ -17,7 +17,9 @@ function Bootstrap() {
     StyleStorage,
     StyleManager,
     PatternFetch,
-    GlobalStyles
+    GlobalStyles,
+    PauseButton,
+    StateManager
   ]
 
   function registerComponents() {
