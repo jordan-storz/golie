@@ -14,6 +14,7 @@ function GridMaker() {
   }
 
   var $body = $('body');
+  var $main = $('main');
 
   function make$Grid() {
     $grid = $(`<div class="grid"></div>`);
@@ -62,7 +63,7 @@ function GridMaker() {
         $column.append($cell);
         this.elementStorage.pushToColumn(i, $cell);
       }
-      $body.append($column);
+      $main.append($column);
     }
   }
 
