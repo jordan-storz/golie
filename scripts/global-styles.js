@@ -2,7 +2,7 @@ function GlobalStyles() {
 
   this.imports = [];
 
-  var backgroundColor = '#efefee';
+  var backgroundColor = 'lightgray';
 
   this.getBackgroundColor = () => backgroundColor;
 
