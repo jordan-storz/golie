@@ -26,3 +26,19 @@ a.btn-floating {
 .red.darken-3#pause-btn: {
   background-color: #e53935 !important;
 }
+
+/* HEADER */
+header {
+  height: 6rem;
+  /*background: #4a148c;*/
+  width: 13rem;
+  position: fixed;
+  top: 1px;
+  left: 16px;
+  border-radius: 5px;
+}
+
+header h3 {
+  /*color: white;*/
+  margin-bottom: 0;
+}
