@@ -1,4 +1,24 @@
-a.button-floating {
+a.btn-floating {
   position: fixed;
-  
+  top: 16px;
+  right: 16px;
+}
+
+.btn-large.btn-floating {
+  height: 6rem;
+  width: 6rem;
+}
+
+#pause-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pause-btn i {
+  font-size: 4rem;
+}
+
+.red.darken-3#pause-btn:hover {
+  background-color: #e53935 !important; 
 }
