@@ -44,15 +44,16 @@ function GridMaker() {
   }
 
   function cellStyles() {
-    var length = $body.width() / dimension;
+    let length = $body.width() / dimension;
+    let height = (100 / dimension) + '%';
     return {
-      width: length,
-      height: length
+      width: '100%',
+      height: height
     }
   }
 
   function colStyles() {
-    var width = $body.width() / dimension;
+    var width = (100 / dimension) + '%';
     return {
       width: width,
       height: '100%',
