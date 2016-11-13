@@ -49,3 +49,20 @@ hgroup h3 {
   /*color: white;*/
   margin-bottom: 0;
 }
+
+/* Toggle Menu Button */
+.menu-toggle {
+  position: fixed;
+  top: -12px;
+  /*left: 43%;*/
+  right: 155px;
+  padding: 0.5rem;
+  background: #b71c1c;
+  color: #fff;
+  border-radius: 4px;
+  z-index: 500;
+  width: 9rem;
+  font-size: 0.9rem;
+  padding-top: 15px;
+  padding-bottom: 0.5px;
+}

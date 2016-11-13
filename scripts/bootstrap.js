@@ -19,6 +19,7 @@ function Bootstrap() {
     PatternFetch,
     GlobalStyles,
     PauseButton,
+    ToggleMenuButton,
     StateManager
   ]
 

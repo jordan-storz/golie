@@ -40,4 +40,16 @@ function PauseButton() {
 
   this.togglePaused = () => this.paused = !this.paused;
 
+  this.moveDown = function() {
+    $button.animate({
+      top: '144'
+    }, {duration: 200, queue: false});
+  }
+
+  this.moveUp = function() {
+    $button.animate({
+      top: '16'
+    }, {duration: 200, queue: false});
+  }
+
 }
