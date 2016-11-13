@@ -25,8 +25,10 @@ function PauseButton() {
   function onClick(event) {
     if (this.paused) {
       showPlayIcon();
+      this.runner.pause();
     } else {
       showPauseIcon();
+      this.runner.resume();
     }
     this.togglePaused();
   }

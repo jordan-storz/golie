@@ -12,11 +12,18 @@ function Runner() {
   }
 
   let self = this;
+  let paused = false;
 
   this.run = function() {
     setInterval(function() {
-      return turn.apply(self);
+      if (!paused) {
+        return turn.apply(self);
+      }
     }, 500)
   }
+
+  this.pause = () => paused = true;
+
+  this.resume = () => paused = false;
 
 }
