@@ -15,32 +15,9 @@ function GridMaker() {
 
   var $body = $('body');
 
-  this.get$Columns = () => $columns;
-
-  function styleBody() {
-    $body.css({
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center'
-    })
-  }
-
   function make$Grid() {
     $grid = $(`<div class="grid"></div>`);
     apply$GridStyles();
-  }
-
-  this.insert$Cells = function() {
-    for (var i = 0; i < dimension; i++) {
-      let $column = makeColumn();
-      for (var j = 0; j < dimension; j++) {
-        let $cell = $(`<div class="cell z-depth-3"></div>`);
-        apply$CellStyles($cell);
-        $column.append($cell);
-        this.elementStorage.pushToColumn(i, $cell);
-      }
-      $body.append($column);
-    }
   }
 
   function cellStyles() {
@@ -76,12 +53,24 @@ function GridMaker() {
     return $column;
   }
 
+  this.insert$Cells = function() {
+    for (var i = 0; i < dimension; i++) {
+      let $column = makeColumn();
+      for (var j = 0; j < dimension; j++) {
+        let $cell = $(`<div class="cell z-depth-3"></div>`);
+        apply$CellStyles($cell);
+        $column.append($cell);
+        this.elementStorage.pushToColumn(i, $cell);
+      }
+      $body.append($column);
+    }
+  }
+
   this.storeCell = function($cell) {
     this.elementStorage.pushToColumn($cell);
   }
 
   this.renderGrid = function() {
-    styleBody();
     this.insert$Cells();
   }
 }

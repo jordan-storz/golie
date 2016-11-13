@@ -13,7 +13,8 @@ function StyleManager() {
   this.switchPattern = function() {
     let url = this.styleStorage.getStorage();
     console.log(url);
-    $('body').css('background-image', `url(${url})`);
+    // $('body').css('background-image', `url(${url})`);
+    $('#background-image').css('background-image', `url(${url})`);
   }
 
 }

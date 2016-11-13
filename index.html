@@ -1,20 +1,32 @@
 <html>
   <head>
-    <title>Form Assessment</title>
+    <title>New Tab</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <style>
     body {
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .cell {
       border: 0.1px solid #aaa;
       background-color: #efefef;
     }
+    #background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      filter: grayscale(100%);
+      z-index: -1;
+    }
     </style>
   </head>
   <body>
+    <img src="" alt="" id="background-image">
   </body>
   <script src="scripts/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
