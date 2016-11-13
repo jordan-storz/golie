@@ -20,6 +20,7 @@ function Bootstrap() {
     GlobalStyles,
     PauseButton,
     ToggleMenuButton,
+    Header,
     StateManager
   ]
 

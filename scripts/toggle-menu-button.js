@@ -1,7 +1,8 @@
 function ToggleMenuButton() {
 
   this.imports = [
-    'pauseButton'
+    'pauseButton',
+    'header'
   ];
 
   this.activated = false;
@@ -9,7 +10,7 @@ function ToggleMenuButton() {
   let $button = $('.menu-toggle');
 
   this.initialize = (function(self) {
-    this.activated = false;
+    self.activated = false;
     $button.click(onClick.bind(self));
   })(this);
 
@@ -17,9 +18,11 @@ function ToggleMenuButton() {
     if (!this.activated) {
       moveDown();
       this.pauseButton.moveDown();
+      this.header.activate();
     } else {
       moveUp();
       this.pauseButton.moveUp();
+      this.header.deactivate();
     }
     this.toggleActivated();
     this.toggleText();
@@ -27,7 +30,7 @@ function ToggleMenuButton() {
 
   function moveDown() {
     $button.animate({
-      top: '154',
+      top: '90',
       height: '25',
       paddingTop: '0'
     }, {duration: 200, queue: false});

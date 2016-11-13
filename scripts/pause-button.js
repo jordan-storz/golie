@@ -42,7 +42,8 @@ function PauseButton() {
 
   this.moveDown = function() {
     $button.animate({
-      top: '144'
+      top: '114',
+      right: '25'
     }, {duration: 200, queue: false});
   }
 
