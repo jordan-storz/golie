@@ -100,6 +100,24 @@ hgroup h3 {
   margin-bottom: 0;
 }
 
+/* Checkbox container */
+#pattern-checkbox[type="checkbox"].filled-in:checked + label:after{
+     border: 2px solid #ff9800;
+     background-color: #e53935;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 18px;
+  margin-left: 12px;
+}
+
+.checkbox-container label {
+  color: #fff;
+}
+
 /* Toggle Menu Button */
 .menu-toggle {
   position: fixed;
