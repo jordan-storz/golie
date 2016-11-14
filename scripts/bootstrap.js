@@ -22,6 +22,7 @@ function Bootstrap() {
     ToggleMenuButton,
     Header,
     Headings,
+    BackgroundImage,
     StateManager
   ]
 

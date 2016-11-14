@@ -2,7 +2,8 @@ function StyleManager() {
 
   this.imports = [
     'styleStorage',
-    'painter'
+    'painter',
+    'backgroundImage'
   ];
 
   this.switchColors = function() {
@@ -12,9 +13,8 @@ function StyleManager() {
 
   this.switchPattern = function() {
     let url = this.styleStorage.getStorage();
-    console.log(url);
-    // $('body').css('background-image', `url(${url})`);
-    $('#background-image').css('background-image', `url(${url})`);
+    // $('#background-image').css('background-image', `url(${url})`);
+    this.backgroundImage.switchNewPattern(url);
   }
 
 }
