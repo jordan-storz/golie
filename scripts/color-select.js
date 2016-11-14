@@ -1,7 +1,8 @@
 function ColorSelect() {
 
   this.imports = [
-    'styleManager'
+    'styleManager',
+    'painter'
   ];
 
   let $previous = $('#previous-color');
@@ -13,6 +14,7 @@ function ColorSelect() {
 
   function nextColor() {
     this.styleManager.switchColors();
+    this.painter.paint();
   }
 
 }
