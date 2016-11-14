@@ -27,6 +27,7 @@ function Bootstrap() {
     PatternSelect,
     PatternCheckbox,
     DimmerCheckbox,
+    LocalStorage,
     StateManager
   ]
 

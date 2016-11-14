@@ -1,7 +1,8 @@
 function ColorFetch() {
 
   this.imports = [
-    'styleStorage'
+    'styleStorage',
+    'localStorage'
   ];
 
   const COLOR_ENDPOINT = 'http://www.colourlovers.com/api/palettes/random';
@@ -36,7 +37,6 @@ function ColorFetch() {
   }
 
   this.getFourSchemesAndUnshift = function() {
-    console.log('unshifting');
     let styleStorage = this.styleStorage;
     return $.when(
       this.getRandomScheme(),
@@ -50,6 +50,24 @@ function ColorFetch() {
          let colorArray = dataset[0][0].colors;
          styleStorage.unshiftColor(colorArray);
        });
+     });
+  }
+
+  this.getFourAndLocalStore = function() {
+    let localStorage = this.localStorage;
+    let styleStorage = this.styleStorage;
+    return $.when(
+      this.getRandomScheme(),
+      this.getRandomScheme(),
+      this.getRandomScheme(),
+      this.getRandomScheme()
+    )
+     .done(function(d1, d2, d3, d4) {
+       let arr = [d1, d2, d3, d4];
+       arr = arr.map((colorObj) => {
+         return colorObj[0][0].colors;
+       })
+       localStorage.setColors(arr);
      });
   }
 

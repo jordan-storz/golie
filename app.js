@@ -9,8 +9,13 @@ app.gameMaker.createInstance();
 app.patternFetch.getFourPatternsAndStore().then(() => {
   app.styleManager.switchNextPattern();
 });
-app.colorFetch.getFourSchemesAndStore().then(() => {
+app.stateManager.getLocalColors().then(() => {
   app.styleManager.switchNextColors();
   app.runner.run();
-  app.runner.pause();
 })
+
+// app.colorFetch.getFourSchemesAndStore().then(() => {
+//   app.styleManager.switchNextColors();
+//   app.runner.run();
+//   app.runner.pause();
+// })
