@@ -15,7 +15,7 @@ function BackgroundImage() {
     $('body').append($new);
     $new.imagesLoaded({background: true}, function() {
       $old.remove();
-      $new.fadeIn(1000);
+      $new.fadeIn(300);
     });
 
   }

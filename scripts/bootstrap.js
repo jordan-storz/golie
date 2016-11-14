@@ -23,6 +23,7 @@ function Bootstrap() {
     Header,
     Headings,
     BackgroundImage,
+    ColorSelect,
     StateManager
   ]
 

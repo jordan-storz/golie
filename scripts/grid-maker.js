@@ -64,6 +64,7 @@ function GridMaker() {
         this.elementStorage.pushToColumn(i, $cell);
       }
       $main.append($column);
+      $column.fadeIn(100);
     }
   }
 

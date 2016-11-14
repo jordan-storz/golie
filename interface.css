@@ -37,8 +37,55 @@ header {
   position: fixed;
   background: #00bcd4;
   z-index: 600;
+  padding-left: 19rem;
 }
 
+header nav {
+  background-color: inherit;
+  box-shadow: 0 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.controls-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 13rem;
+  padding-top: 10px;
+  border-bottom: 1px solid black;
+}
+
+.controls-container label {
+  color: white;
+}
+
+.controls-container .btn {
+  border-radius: 50%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls-container i {
+  font-size: 3rem !important;
+  color: black !important;
+  border-radius: 50% !important;
+}
+
+.controls-container i:hover {
+  font-size: 3rem !important;
+  color: #444 !important;
+}
+
+.controls-container p {
+  font-size: 1.1rem;
+}
+
+/* HGROUP */
 hgroup {
   position: fixed;
   top: 8px;

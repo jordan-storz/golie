@@ -40,7 +40,19 @@
       <p>Powered by ColourLovers</p>
     </hgroup>
     <button class="menu-toggle">Controls</button>
-    <header class="z-depth-2"></header>
+    <header class="z-depth-2">
+      <nav>
+        <div class="controls-container">
+          <a href="#" id="previous-color">
+            <i class="material-icons waves-effect">skip_previous</i>
+          </a>
+          <p for="color-skip">Select Colors</p>
+          <a href="#" id="next-color">
+            <i class="material-icons waves-effect">skip_next</i>
+          </a>
+        </div>
+      </nav>
+    </header>
     <a id="pause-btn" class="btn-floating btn-large waves-effect red darken-3 z-depth-4">
       <i class="material-icons pause-icon">pause</i>
       <i class="material-icons play-icon">play_arrow</i>
@@ -51,6 +63,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
   <script src="vendor/images-loaded.min.js"></script>
+  <script src="scripts/color-select.js"></script>
   <script src="scripts/background-image.js"></script>
   <script src="scripts/headings.js"></script>
   <script src="scripts/header.js"></script>
