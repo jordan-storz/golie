@@ -50,7 +50,7 @@ function StyleManager() {
   }
 
   this.dim = function() {
-    this.globalStyles.setBackgroundColor('#101');
+    this.globalStyles.setBackgroundColor('#666');
     this.painter.paint();
     $('.cell').animate({
       borderColor: '#222'
