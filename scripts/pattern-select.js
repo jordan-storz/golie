@@ -36,7 +36,8 @@ function PatternSelect() {
     $container.animate({
       opacity: 1
     }, {queue: false});
-    $container.removeClass('disabled-mode')
+    $container.removeClass('disabled-mode');
+    this.toggleCursor();
   }
 
   this.hide = function() {
@@ -44,11 +45,20 @@ function PatternSelect() {
     $container.animate({
       opacity: 0.4
     }, {queue: false});
-    $container.addClass('disabled-mode')
+    $container.addClass('disabled-mode');
+    this.toggleCursor();
   }
 
   this.toggledDisabled = function() {
     this.disabled = !this.disabled;
+  }
+
+  this.toggleCursor = function() {
+    if (this.disabled) {
+      $('#pattern-select-container *').css('cursor', 'default');
+    } else {
+      $('#pattern-select-container *').css('cursor', 'auto');
+    }
   }
 
 }

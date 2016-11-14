@@ -86,8 +86,12 @@ header nav {
   font-size: 1.1rem;
 }
 
-#pattern-select-container.disabled-mode a {
-  cursor: alias !important;
+#pattern-select-container.disabled-mode a:hover {
+  cursor: default !important;
+}
+
+a.disabled {
+  cursor: default !important;
 }
 
 /* HGROUP */

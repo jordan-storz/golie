@@ -12,5 +12,5 @@ app.patternFetch.getFourPatternsAndStore().then(() => {
 app.colorFetch.getFourSchemesAndStore().then(() => {
   app.styleManager.switchNextColors();
   app.runner.run();
-  // app.runner.pause();
+  app.runner.pause();
 })
