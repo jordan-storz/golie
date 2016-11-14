@@ -2,7 +2,8 @@ function ToggleMenuButton() {
 
   this.imports = [
     'pauseButton',
-    'header'
+    'header',
+    'headings'
   ];
 
   this.activated = false;
@@ -24,6 +25,7 @@ function ToggleMenuButton() {
       this.pauseButton.moveUp();
       this.header.deactivate();
     }
+    this.headings.toggleColor();
     this.toggleActivated();
     this.toggleText();
   }

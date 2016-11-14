@@ -21,6 +21,7 @@ function Bootstrap() {
     PauseButton,
     ToggleMenuButton,
     Header,
+    Headings,
     StateManager
   ]
 
