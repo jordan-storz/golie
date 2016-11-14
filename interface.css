@@ -86,14 +86,6 @@ header nav {
   font-size: 1.1rem;
 }
 
-#pattern-select-container.disabled-mode a:hover {
-  cursor: default !important;
-}
-
-a.disabled {
-  cursor: default !important;
-}
-
 /* HGROUP */
 hgroup {
   position: fixed;
@@ -109,7 +101,7 @@ hgroup h3 {
 }
 
 /* Checkbox container */
-#pattern-checkbox[type="checkbox"].filled-in:checked + label:after{
+#pattern-checkbox.filled-in:checked + label:after{
      border: 2px solid #ff9800;
      background-color: #e53935;
 }
