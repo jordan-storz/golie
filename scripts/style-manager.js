@@ -3,7 +3,9 @@ function StyleManager() {
   this.imports = [
     'styleStorage',
     'painter',
-    'backgroundImage'
+    'backgroundImage',
+    'globalStyles',
+    'headings'
   ];
 
   this.switchNextColors = function() {
@@ -35,5 +37,25 @@ function StyleManager() {
 
   this.addPattern = function() {
     this.backgroundImage.addPattern();
+  }
+
+  this.brighten = function() {
+    this.globalStyles.setBackgroundColor('lightgray');
+    this.painter.paint();
+    $('.cell').animate({
+      borderColor: '#aaa'
+    }, {duration: 500, queue: false});
+    this.headings.darkModeOn();
+    this.headings.toggleColor();
+  }
+
+  this.dim = function() {
+    this.globalStyles.setBackgroundColor('#101');
+    this.painter.paint();
+    $('.cell').animate({
+      borderColor: '#222'
+    }, {duration: 500, queue: false});
+    this.headings.darkModeOn();
+    this.headings.toggleColor();
   }
 }

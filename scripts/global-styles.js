@@ -7,6 +7,8 @@ function GlobalStyles() {
   this.getBackgroundColor = () => backgroundColor;
 
   this.setBackgroundColor = (color) => {
+    console.log(backgroundColor);
     backgroundColor = color;
   }
+
 }

@@ -101,7 +101,7 @@ hgroup h3 {
 }
 
 /* Checkbox container */
-#pattern-checkbox.filled-in:checked + label:after{
+input[type="checkbox"].filled-in:checked + label:after{
      border: 2px solid #ff9800;
      background-color: #e53935;
 }
@@ -116,6 +116,10 @@ hgroup h3 {
 
 .checkbox-container label {
   color: #fff;
+}
+
+.dimmer-container {
+  margin-left: 34px;
 }
 
 
