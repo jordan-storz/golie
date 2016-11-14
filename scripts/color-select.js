@@ -10,11 +10,15 @@ function ColorSelect() {
 
   this.initialize = (function(self) {
     $next.click(nextColor.bind(self));
+    $previous.click(previousColor.bind(self));
   })(this);
 
   function nextColor() {
-    this.styleManager.switchColors();
-    this.painter.paint();
+    this.styleManager.switchNextColors();
+  }
+
+  function previousColor() {
+    this.styleManager.switchPreviousColors();
   }
 
 }

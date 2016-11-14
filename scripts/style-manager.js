@@ -6,13 +6,20 @@ function StyleManager() {
     'backgroundImage'
   ];
 
-  this.switchColors = function() {
+  this.switchNextColors = function() {
     let next = this.styleStorage.giveNext();
     this.painter.changeColors(next);
+    this.painter.paint();
+  }
+
+  this.switchPreviousColors = function() {
+    let next = this.styleStorage.givePrevious();
+    this.painter.changeColors(next);
+    this.painter.paint();
   }
 
   this.switchPattern = function() {
-    let url = this.styleStorage.getStorage();
+    let url = this.styleStorage.getPatternStorage();
     // $('#background-image').css('background-image', `url(${url})`);
     this.backgroundImage.switchNewPattern(url);
   }

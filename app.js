@@ -10,7 +10,7 @@ app.patternFetch.getPatternAndStore().then(() => {
   app.styleManager.switchPattern();
 });
 app.colorFetch.getFourSchemesAndStore().then(() => {
-  app.styleManager.switchColors();
+  app.styleManager.switchNextColors();
   app.runner.run();
   // app.runner.pause();
 })
