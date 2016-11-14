@@ -24,6 +24,7 @@ function Bootstrap() {
     Headings,
     BackgroundImage,
     ColorSelect,
+    PatternSelect,
     StateManager
   ]
 

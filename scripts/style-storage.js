@@ -1,13 +1,15 @@
 function StyleStorage() {
 
   this.imports = [
-    'colorFetch'
+    'colorFetch',
+    'patternFetch'
   ];
 
   let colorArrayStorage = [];
   let patternStorage = [];
 
-  let current = 0;
+  let currentColorIndex = 0;
+  let currentPatternIndex = 0;
 
   this.storeColor = function(colorArray) {
     colorArrayStorage.push(colorArray);
@@ -17,20 +19,20 @@ function StyleStorage() {
     colorArrayStorage.unshift(colorArray);
   }
 
-  this.giveNext = function() {
-    current += 1;
-    let result = colorArrayStorage[current];
-    if (current > (colorArrayStorage.length - 3)) {
+  this.giveNextColors = function() {
+    currentColorIndex += 1;
+    let result = colorArrayStorage[currentColorIndex];
+    if (currentColorIndex > (colorArrayStorage.length - 3)) {
       this.colorFetch.getFourSchemesAndStore();
     }
     return result;
   }
 
-  this.givePrevious = function() {
-    current -= 1;
-    let result = colorArrayStorage[current];
-    if (current < 1) {
-      current = 4;
+  this.givePreviousColors = function() {
+    currentColorIndex -= 1;
+    let result = colorArrayStorage[currentColorIndex];
+    if (currentColorIndex < 1) {
+      currentColorIndex = 4;
       this.colorFetch.getFourSchemesAndUnshift();
     }
     return result;
@@ -40,6 +42,27 @@ function StyleStorage() {
     patternStorage.push(patternUrl);
   }
 
-  this.getPatternStorage = () => patternStorage;
+  this.unshiftPattern = function(patternUrl) {
+    patternStorage.unshift(patternUrl);
+  }
+
+  this.giveNextPatternStorage = function() {
+    currentPatternIndex += 1;
+    let result = patternStorage[currentPatternIndex];
+    if (currentPatternIndex > (patternStorage.length - 3)) {
+      this.patternFetch.getFourPatternsAndStore();
+    }
+    return result;
+  }
+
+  this.givePreviousPatternStorage = function() {
+    currentPatternIndex -= 1;
+    let result = patternStorage[currentPatternIndex];
+    if (currentPatternIndex < 1) {
+      currentPatternIndex = 4;
+      this.patternFetch.getFourPatternsAndUnshift();
+    }
+    return result;
+  }
 
 }
