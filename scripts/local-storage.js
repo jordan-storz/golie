@@ -29,8 +29,23 @@ function LocalStorage() {
   }
 
   this.clearColors = function() {
-    console.log('clearing colors');
     window.localStorage.setItem('colors', null);
+  }
+
+  this.getUI = function() {
+    let result;
+    let stateJSON = window.localStorage.getItem('uiState');
+    if (!stateJSON) {
+      result = null;
+    } else {
+      result = JSON.parse(stateJSON);
+    }
+    return result;
+  }
+
+  this.setUI = function(state) {
+    let stateJSON = JSON.stringify(state);
+    window.localStorage.setItem('uiState', stateJSON);
   }
 
 

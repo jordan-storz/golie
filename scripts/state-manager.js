@@ -31,4 +31,22 @@ function StateManager() {
     this.colorFetch.getFourAndLocalStore();
   }
 
+  this.getLocalUIState = function() {
+    let localUI = this.localStorage.getUI();
+    stateUI = localUI;
+    // console.log(localUI);
+    return localUI;
+  }
+
+  this.setLocalUIState = function() {
+    this.localStorage.setUI(stateUI);
+  }
+
+  this.getUIState = () => stateUI;
+
+  this.saveUIProperty = function(property, val) {
+    stateUI[property] = val;
+    this.setLocalUIState();
+  }
+
 }

@@ -1,7 +1,8 @@
 function DimmerCheckbox() {
 
   this.imports = [
-    'styleManager'
+    'styleManager',
+    'stateManager'
   ];
 
   let $checkbox = $('#dimmer-checkbox');
@@ -10,14 +11,11 @@ function DimmerCheckbox() {
     $checkbox.change(function(event) {
       if (this.checked) {
         self.styleManager.dim();
+        self.stateManager.saveUIProperty('dim', true);
       } else {
         self.styleManager.brighten();
+        self.stateManager.saveUIProperty('dim', false);
       }
     });
   })(this);
-
-  function onChange() {
-
-  }
-
 }
