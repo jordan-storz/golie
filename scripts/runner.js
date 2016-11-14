@@ -19,7 +19,7 @@ function Runner() {
       if (!paused) {
         return turn.apply(self);
       }
-    }, 500)
+    }, 1000)
   }
 
   this.pause = () => paused = true;

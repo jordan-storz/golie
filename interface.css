@@ -38,6 +38,7 @@ header {
   background: #00bcd4;
   z-index: 600;
   padding-left: 19rem;
+  display: none;
 }
 
 header nav {
@@ -115,4 +116,5 @@ hgroup h3 {
   padding-top: 15px;
   padding-bottom: 0.5px;
   border-top: 0;
+  display: none;
 }
