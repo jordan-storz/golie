@@ -18,5 +18,15 @@ function BackgroundImage() {
       $new.fadeIn(300);
     });
 
+    this.removePattern = function() {
+      let $background = $('#background-image');
+      $background.fadeOut();
+    }
+
+    this.addPattern = function() {
+      let $background = $('#background-image');
+      $background.fadeIn(); 
+    }
+
   }
 }

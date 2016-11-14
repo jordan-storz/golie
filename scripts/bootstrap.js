@@ -25,6 +25,7 @@ function Bootstrap() {
     BackgroundImage,
     ColorSelect,
     PatternSelect,
+    PatternCheckbox,
     StateManager
   ]
 

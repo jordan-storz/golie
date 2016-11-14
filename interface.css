@@ -86,6 +86,10 @@ header nav {
   font-size: 1.1rem;
 }
 
+#pattern-select-container.disabled-mode a {
+  cursor: alias !important;
+}
+
 /* HGROUP */
 hgroup {
   position: fixed;
@@ -111,12 +115,13 @@ hgroup h3 {
   align-items: center;
   justify-content: center;
   padding-top: 18px;
-  margin-left: 12px;
+  margin-left: 0px;
 }
 
 .checkbox-container label {
   color: #fff;
 }
+
 
 /* Toggle Menu Button */
 .menu-toggle {

@@ -28,4 +28,12 @@ function StyleManager() {
     let url = this.styleStorage.givePreviousPatternStorage();
     this.backgroundImage.switchNewPattern(url);
   }
+
+  this.removePattern = function() {
+    this.backgroundImage.removePattern();
+  }
+
+  this.addPattern = function() {
+    this.backgroundImage.addPattern();
+  }
 }
