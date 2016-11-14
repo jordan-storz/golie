@@ -12,7 +12,6 @@ function ColorSelect() {
   })(this);
 
   function nextColor() {
-    console.log('next color');
     this.styleManager.switchColors();
   }
 

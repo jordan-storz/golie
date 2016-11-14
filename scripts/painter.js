@@ -31,7 +31,6 @@ function Painter() {
     return '#' + colorScheme[random];
   }
 
-  function process$Cell() {}
 
   this.paint = function() {
     let instances = this.instanceStorage.getStorage();

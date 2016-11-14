@@ -13,7 +13,6 @@ function ToggleMenuButton() {
   this.initialize = (function(self) {
     self.activated = false;
     $button.click(onClick.bind(self));
-    $('document').ready(onClick.bind(self));
   })(this);
 
   function onClick(event) {
