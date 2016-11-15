@@ -7,15 +7,31 @@ function DimmerCheckbox() {
 
   let $checkbox = $('#dimmer-checkbox');
 
-  this.initialize = (function(self) {
+
+  this.retrieveState = function() {
+    let checked = this.stateManager.getUIState().dim;
+    if (checked) {
+      $checkbox.attr('checked', true);
+      $checkbox.trigger('change');
+    } else {
+      $checkbox.attr('checked', false);
+      $checkbox.trigger('change');
+    }
+  }
+
+  this.initializeComponent = function() {
+    let styleManager = this.styleManager;
+    let stateManager = this.stateManager;
     $checkbox.change(function(event) {
       if (this.checked) {
-        self.styleManager.dim();
-        self.stateManager.saveUIProperty('dim', true);
+        styleManager.dim();
+        stateManager.saveUIProperty('dim', true);
       } else {
-        self.styleManager.brighten();
-        self.stateManager.saveUIProperty('dim', false);
+        styleManager.brighten();
+        stateManager.saveUIProperty('dim', false);
       }
     });
-  })(this);
+    this.retrieveState();
+  };
+
 }

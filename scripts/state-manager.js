@@ -34,7 +34,6 @@ function StateManager() {
   this.getLocalUIState = function() {
     let localUI = this.localStorage.getUI();
     stateUI = localUI;
-    // console.log(localUI);
     return localUI;
   }
 
@@ -47,6 +46,10 @@ function StateManager() {
   this.saveUIProperty = function(property, val) {
     stateUI[property] = val;
     this.setLocalUIState();
+  }
+
+  this.initializeComponent = function() {
+    this.getLocalUIState();
   }
 
 }

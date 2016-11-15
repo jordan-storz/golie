@@ -3,6 +3,7 @@ function Bootstrap() {
   var injector = new Injector();
 
   var components = [
+    StateManager,
     Runner,
     GridMaker,
     GameMaker,
@@ -27,8 +28,7 @@ function Bootstrap() {
     PatternSelect,
     PatternCheckbox,
     DimmerCheckbox,
-    LocalStorage,
-    StateManager
+    LocalStorage
   ]
 
   function registerComponents() {
@@ -50,9 +50,19 @@ function Bootstrap() {
     });
   }
 
+  function initializeComponents() {
+    components.forEach((component) => {
+      let instance = injector.provide(component);
+      if (instance.hasOwnProperty('initializeComponent')) {
+        instance.initializeComponent();
+      };
+    });
+  }
+
   this.go = function(obj) {
     registerComponents();
     wireComponents();
+    initializeComponents();
     exportInstances(obj)
   }
 }
