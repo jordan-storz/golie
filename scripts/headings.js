@@ -1,6 +1,8 @@
 function Headings() {
 
-  this.imports = [];
+  this.imports = [
+    'stateManager'
+  ];
 
   let $headings = $('hgroup');
   let lightened;
@@ -11,6 +13,10 @@ function Headings() {
   this.initialize = (function(self) {
     lightened = false;
   })(this);
+
+  this.initializeComponent = function() {
+    let dim = this.stateManager.getUIState().dim;
+  }
 
   function toggleLightened() {
     lightened = !lightened;

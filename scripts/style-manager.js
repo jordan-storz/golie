@@ -49,7 +49,7 @@ function StyleManager() {
     $('.cell').animate({
       borderColor: '#aaa'
     }, {duration: 500, queue: false});
-    this.headings.darkModeOn();
+    this.headings.darkModeOff();
     this.headings.toggleColor();
   }
 

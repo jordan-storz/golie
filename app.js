@@ -7,9 +7,6 @@ app.gridMaker.renderGrid();
 app.gameMaker.initialize();
 app.gameMaker.createInstance();
 app.stateManager.getLocalUIState();
-// app.patternFetch.getFourPatternsAndStore().then(() => {
-//   app.styleManager.switchNextPattern();
-// });
 app.stateManager.getLocalColors().then(() => {
   app.styleManager.switchNextColors();
   app.runner.run();
