@@ -4,6 +4,8 @@ function Bootstrap() {
 
   var components = [
     StateManager,
+    StyleManager,
+    BackgroundImage,
     Runner,
     GridMaker,
     GameMaker,
@@ -16,14 +18,12 @@ function Bootstrap() {
     NeighborCalculator,
     ColorFetch,
     StyleStorage,
-    StyleManager,
     PatternFetch,
     GlobalStyles,
     PauseButton,
     ToggleMenuButton,
     Header,
     Headings,
-    BackgroundImage,
     ColorSelect,
     PatternSelect,
     PatternCheckbox,
@@ -63,6 +63,6 @@ function Bootstrap() {
     registerComponents();
     wireComponents();
     initializeComponents();
-    exportInstances(obj)
+    exportInstances(obj);
   }
 }

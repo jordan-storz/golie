@@ -22,13 +22,17 @@ function StyleManager() {
 
   this.switchNextPattern = function() {
     let url = this.styleStorage.giveNextPatternStorage();
-    // $('#background-image').css('background-image', `url(${url})`);
     this.backgroundImage.switchNewPattern(url);
   }
 
   this.switchPreviousPattern = function() {
     let url = this.styleStorage.givePreviousPatternStorage();
     this.backgroundImage.switchNewPattern(url);
+  }
+
+  this.switchInvisPattern = function() {
+    let url = this.styleStorage.giveNextPatternStorage();
+    this.backgroundImage.switchInvisPattern(url);
   }
 
   this.removePattern = function() {

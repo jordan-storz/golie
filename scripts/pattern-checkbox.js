@@ -2,21 +2,47 @@ function PatternCheckbox() {
 
   this.imports = [
     'patternSelect',
-    'styleManager'
+    'styleManager',
+    'stateManager',
+    'patternFetch'
   ];
 
   let $checkbox = $('#pattern-checkbox');
 
-  this.initialize = (function(self) {
+  this.initializeComponent = function() {
+    let styleManager = this.styleManager;
+    let patternSelect = this.patternSelect;
+    let stateManager = this.stateManager;
     $checkbox.change(function(event) {
       if (this.checked) {
-        self.patternSelect.show();
-        self.styleManager.addPattern();
+        patternSelect.show();
+        styleManager.addPattern();
+        // styleManager.switchNextPattern();
+        stateManager.saveUIProperty('includePattern', true);
       } else {
-        self.patternSelect.hide();
-        self.styleManager.removePattern();
+        patternSelect.hide();
+        styleManager.removePattern();
+        stateManager.saveUIProperty('includePattern', false);
       }
     });
-  })(this);
+    this.retrieveState();
+  };
+
+  this.retrieveState = function() {
+    let checked = this.stateManager.getUIState().includePattern;
+    if (checked) {
+      this.patternFetch.getFourPatternsAndStore().then(() => {
+        app.styleManager.switchNextPattern();
+      });
+      $checkbox.attr('checked', true);
+      $checkbox.trigger('change');
+    } else {
+      this.patternFetch.getFourPatternsAndStore().then(() => {
+        app.styleManager.switchInvisPattern();
+      });
+      $checkbox.attr('checked', false);
+      $checkbox.trigger('change');
+    }
+  }
 
 }

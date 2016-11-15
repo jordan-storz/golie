@@ -8,7 +8,7 @@ function StateManager() {
 
   let stateUI = {
     dim: false,
-    includePattern: false
+    includePattern: true
   }
 
   this.getLocalColors = function() {

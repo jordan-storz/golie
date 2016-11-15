@@ -7,18 +7,6 @@ function DimmerCheckbox() {
 
   let $checkbox = $('#dimmer-checkbox');
 
-
-  this.retrieveState = function() {
-    let checked = this.stateManager.getUIState().dim;
-    if (checked) {
-      $checkbox.attr('checked', true);
-      $checkbox.trigger('change');
-    } else {
-      $checkbox.attr('checked', false);
-      $checkbox.trigger('change');
-    }
-  }
-
   this.initializeComponent = function() {
     let styleManager = this.styleManager;
     let stateManager = this.stateManager;
@@ -33,5 +21,16 @@ function DimmerCheckbox() {
     });
     this.retrieveState();
   };
+
+  this.retrieveState = function() {
+    let checked = this.stateManager.getUIState().dim;
+    if (checked) {
+      $checkbox.attr('checked', true);
+      $checkbox.trigger('change');
+    } else {
+      $checkbox.attr('checked', false);
+      $checkbox.trigger('change');
+    }
+  }
 
 }

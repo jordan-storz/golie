@@ -44,7 +44,6 @@ function LocalStorage() {
   }
 
   this.setUI = function(state) {
-    console.log(state);
     let stateJSON = JSON.stringify(state);
     window.localStorage.setItem('uiState', stateJSON);
   }
