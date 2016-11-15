@@ -10,9 +10,9 @@ function Headings() {
 
   let defaultColor = '#000';
 
-  this.initialize = (function(self) {
+  this.initializeComponent = function() {
     lightened = false;
-  })(this);
+  }
 
   this.initializeComponent = function() {
     let dim = this.stateManager.getUIState().dim;
