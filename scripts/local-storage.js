@@ -54,6 +54,9 @@ function LocalStorage() {
     this.set('favorites', favoritesJSON);
   }
 
+  this.getFavorites = function() {
+    return this.get('favorites');
+  }
 
 
 }

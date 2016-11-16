@@ -29,6 +29,12 @@ function FavoritesManager() {
     });
   }
 
+  this.retrieveLocalFavorites = function() {
+    let localFavoritesJSON = this.localStorage.getFavorites();
+    let localFavorites = this.favoritesPackager.parseFavorites(localFavoritesJSON);
+    this.favorites = this.favorites.concat(localFavorites);
+  }
+
   this.getCurrent = function() {
     return this.favoritesPackager.packageCurrent();
   }
