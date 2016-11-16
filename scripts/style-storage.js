@@ -11,6 +11,9 @@ function StyleStorage() {
   let currentColorIndex = 0;
   let currentPatternIndex = 0;
 
+  this.shareColors = () => colorArrayStorage;
+  this.shareColorIndex = () => currentColorIndex;
+
   this.storeColor = function(colorArray) {
     colorArrayStorage.push(colorArray);
   }
@@ -34,13 +37,20 @@ function StyleStorage() {
   }
 
   this.givePreviousColors = function() {
-    currentColorIndex -= 1;
+    if (currentColorIndex === 0) {
+      currentColorIndex = 3;
+    } else {
+      currentColorIndex -= 1;
+    }
+
     let result = colorArrayStorage[currentColorIndex];
     if (currentColorIndex < 1) {
       currentColorIndex = 4;
       this.colorFetch.getFourSchemesAndUnshift();
     }
     return result;
+
+
   }
 
   this.storePattern = function(patternUrl) {
@@ -62,11 +72,18 @@ function StyleStorage() {
 
   this.giveCurrentPattern = function() {
     let result = patternStorage[currentPatternIndex];
+    if (currentPatternIndex === 0) {
+      this.colorFetch.getFourSchemesAndUnshift();
+    }
     return result;
   }
 
   this.givePreviousPatternStorage = function() {
-    currentPatternIndex -= 1;
+    if (currentPatternIndex === 0) {
+      currentPatternIndex = 3;
+    } else {
+      currentPatternIndex -= 1;
+    }
     let result = patternStorage[currentPatternIndex];
     if (currentPatternIndex < 1) {
       currentPatternIndex = 4;
@@ -78,8 +95,7 @@ function StyleStorage() {
   this.embedFavorite = function(favorite) {
     let colors = favorite.colors;
     let pattern = favorite.pattern;
-    console.log(pattern);
-    console.log(colors);
   }
+
 
 }

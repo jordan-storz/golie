@@ -6,10 +6,13 @@ function StyleManager() {
     'backgroundImage',
     'globalStyles',
     'headings',
-    'favoritesManager'
+    'favoritesManager',
+    'favoriteButton',
+    'colorFetch'
   ];
 
   this.showFavorite = function() {
+    this.styleStorage.giveCurrentColors();
     let favorite = this.favoritesManager.getRandomFavorite();
     let colors = favorite.colors;
     let pattern = favorite.pattern;
@@ -22,23 +25,27 @@ function StyleManager() {
     let next = this.styleStorage.giveNextColors();
     this.painter.changeColors(next);
     this.painter.paint();
+    this.favoriteButton.senseFavorite();
   }
 
   this.switchPreviousColors = function() {
     let next = this.styleStorage.givePreviousColors();
     this.painter.changeColors(next);
     this.painter.paint();
+    this.favoriteButton.senseFavorite();
   }
 
   this.switchNextPattern = function() {
     let url = this.styleStorage.giveNextPatternStorage();
     this.backgroundImage.switchNewPattern(url);
+    this.favoriteButton.senseFavorite();
   }
 
 
   this.switchPreviousPattern = function() {
     let url = this.styleStorage.givePreviousPatternStorage();
     this.backgroundImage.switchNewPattern(url);
+    this.favoriteButton.senseFavorite();
   }
 
   this.switchInvisPattern = function() {

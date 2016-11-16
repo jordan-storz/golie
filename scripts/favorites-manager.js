@@ -23,7 +23,7 @@ function FavoritesManager() {
   this.senseFavorite = function() {
     let current = this.getCurrent();
     return this.favorites.some(function(favorite) {
-      let result = favorite.pattern === current.pattern;
+      let result = favorite.pattern == current.pattern;
       if (result) {
         for (let i = 0; i < favorite.colors.length; i++) {
           let colorScheme = favorite.colors[i];

@@ -4,13 +4,12 @@ function FavoriteButton() {
     'favoritesManager'
   ];
 
-  this.initializeComponent = function() {}
-
   let $button = $('#favorite-preset-btn');
   let $icon = $('#favorite-preset-btn i');
 
 
   this.initializeComponent = function() {
+    let self = this;
     $button.click(saveFavorite.bind(this));
   }
 
@@ -22,12 +21,21 @@ function FavoriteButton() {
     $icon.css('color', 'white');
   }
 
-  function saveFavorite() {
-    this.favoritesManager.saveFavorite();
+  this.senseFavorite = function() {
+    console.log('sensing favorite');
     let isCurrentFavorite = this.favoritesManager.senseFavorite();
-    console.log(isCurrentFavorite);
     if (isCurrentFavorite) {
+      console.log('this is a favorite');
       this.beGold();
+    } else {
+      this.beNotGold();
     }
   }
+
+  function saveFavorite() {
+    this.favoritesManager.saveFavorite();
+    this.senseFavorite();
+  }
+
+
 }

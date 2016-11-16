@@ -9,11 +9,12 @@ app.gameMaker.createInstance();
 app.stateManager.getLocalUIState();
 app.stateManager.getLocalColors().then(() => {
   if (app.favoritesManager.showFavorite()) {
-    // console.log('SHOWING FAVORITE');
     app.styleManager.showFavorite();
+    app.favoriteButton.beGold();
+
   } else {
     app.styleManager.switchNextColors();
   }
   app.runner.run();
-  app.runner.pause();
+  // app.runner.pause();
 })
