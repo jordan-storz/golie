@@ -29,7 +29,9 @@ function Bootstrap() {
     PatternCheckbox,
     DimmerCheckbox,
     LocalStorage,
-    FavoriteButton
+    FavoriteButton,
+    FavoritesManager,
+    FavoritesPackager
   ]
 
   function registerComponents() {

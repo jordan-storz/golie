@@ -1,7 +1,8 @@
 function LocalStorage() {
 
   this.imports = [
-    'stateManager'
+    'stateManager',
+    'favoritesPackager'
   ];
 
   this.initialize = (function(self) {
@@ -46,6 +47,11 @@ function LocalStorage() {
   this.setUI = function(state) {
     let stateJSON = JSON.stringify(state);
     window.localStorage.setItem('uiState', stateJSON);
+  }
+
+  this.refreshFavorites = function(favorites) {
+    let favoritesJSON = this.favoritesPackager.favoritesToJSON(favorites);
+    this.set('favorites', favoritesJSON);
   }
 
 

@@ -57,4 +57,6 @@ function PatternSelect() {
     }
   }
 
+  this.isDisabled = () => this.disabled;
+
 }

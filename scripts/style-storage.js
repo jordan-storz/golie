@@ -28,6 +28,11 @@ function StyleStorage() {
     return result;
   }
 
+  this.giveCurrentColors = function() {
+    let result = colorArrayStorage[currentColorIndex];
+    return result;
+  }
+
   this.givePreviousColors = function() {
     currentColorIndex -= 1;
     let result = colorArrayStorage[currentColorIndex];
@@ -52,6 +57,11 @@ function StyleStorage() {
     if (currentPatternIndex > (patternStorage.length - 3)) {
       this.patternFetch.getFourPatternsAndStore();
     }
+    return result;
+  }
+
+  this.giveCurrentPattern = function() {
+    let result = patternStorage[currentPatternIndex];
     return result;
   }
 
