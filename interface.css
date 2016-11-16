@@ -44,6 +44,7 @@ header nav {
   background-color: inherit;
   box-shadow: 0 0 0 0;
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -139,4 +140,12 @@ input[type="checkbox"].filled-in:checked + label:after{
   padding-top: 15px;
   padding-bottom: 0.5px;
   border-top: 0;
+}
+
+#favorite-preset-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+  margin-right: 45px;
 }
