@@ -28,7 +28,8 @@ function Bootstrap() {
     PatternSelect,
     PatternCheckbox,
     DimmerCheckbox,
-    LocalStorage
+    LocalStorage,
+    FavoriteButton
   ]
 
   function registerComponents() {
