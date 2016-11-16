@@ -20,6 +20,23 @@ function FavoritesManager() {
     this.localStorage.refreshFavorites(this.favorites);
   }
 
+  this.removeFavorite = function() {
+    let current = this.getCurrent();
+    console.log(current);
+    this.favorites.forEach((favorite, index) => {
+      if (favorite.pattern === current.pattern) {
+        for (let i = 0; i < favorite.colors.length; i++) {
+          if (favorite.colors[i] !== current.colors[i]) {
+            return;
+          }
+        }
+        console.log('removing favorite');
+        this.favorites.splice(index, 1);
+        this.localStorage.refreshFavorites(this.favorites);
+      }
+    })
+  }
+
   this.senseFavorite = function() {
     let current = this.getCurrent();
     return this.favorites.some(function(favorite) {
@@ -66,7 +83,7 @@ function FavoritesManager() {
 
   function coinFlip() {
     let random = Math.floor(Math.random() * 10);
-    return random > 6;
+    return random > 1;
   }
 
 }

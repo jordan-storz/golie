@@ -22,10 +22,8 @@ function FavoriteButton() {
   }
 
   this.senseFavorite = function() {
-    console.log('sensing favorite');
     let isCurrentFavorite = this.favoritesManager.senseFavorite();
     if (isCurrentFavorite) {
-      console.log('this is a favorite');
       this.beGold();
     } else {
       this.beNotGold();
@@ -33,7 +31,11 @@ function FavoriteButton() {
   }
 
   function saveFavorite() {
-    this.favoritesManager.saveFavorite();
+    if ($icon.css('color') === 'rgb(255, 215, 0)') {
+      this.favoritesManager.removeFavorite();
+    } else {
+      this.favoritesManager.saveFavorite();
+    }
     this.senseFavorite();
   }
 

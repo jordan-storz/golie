@@ -22,6 +22,14 @@ function StyleStorage() {
     colorArrayStorage.unshift(colorArray);
   }
 
+  this.setCurrentColors = function(colorArray) {
+    colorArrayStorage[currentColorIndex] = colorArray;
+  }
+
+  this.setCurrentPattern = function(patternUrl) {
+    patternStorage[currentPatternIndex] = patternUrl;
+  }
+
   this.giveNextColors = function() {
     currentColorIndex += 1;
     let result = colorArrayStorage[currentColorIndex];

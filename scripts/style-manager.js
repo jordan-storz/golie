@@ -12,10 +12,11 @@ function StyleManager() {
   ];
 
   this.showFavorite = function() {
-    this.styleStorage.giveCurrentColors();
     let favorite = this.favoritesManager.getRandomFavorite();
     let colors = favorite.colors;
     let pattern = favorite.pattern;
+    this.styleStorage.setCurrentColors(colors);
+    this.styleStorage.setCurrentPattern(pattern);
     this.painter.changeColors(colors);
     this.backgroundImage.switchNewPattern(pattern);
     this.painter.paint();
