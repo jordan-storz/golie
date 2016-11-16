@@ -17,7 +17,6 @@ function PatternCheckbox() {
       if (this.checked) {
         patternSelect.show();
         styleManager.addPattern();
-        // styleManager.switchNextPattern();
         stateManager.saveUIProperty('includePattern', true);
       } else {
         patternSelect.hide();

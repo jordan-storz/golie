@@ -32,7 +32,7 @@ function PatternSelect() {
   }
 
   this.show = function() {
-    this.toggledDisabled();
+    this.disabled = false;
     $container.animate({
       opacity: 1
     }, {queue: false});
@@ -41,16 +41,12 @@ function PatternSelect() {
   }
 
   this.hide = function() {
-    this.toggledDisabled();
+    this.disabled = true;
     $container.animate({
       opacity: 0.4
     }, {queue: false});
     $container.addClass('disabled-mode');
     this.toggleCursor();
-  }
-
-  this.toggledDisabled = function() {
-    this.disabled = !this.disabled;
   }
 
   this.toggleCursor = function() {
