@@ -16,5 +16,5 @@ app.stateManager.getLocalColors().then(() => {
     app.styleManager.switchNextColors();
   }
   app.runner.run();
-  // app.runner.pause();
+  app.runner.pause();
 })

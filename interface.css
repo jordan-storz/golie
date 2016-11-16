@@ -31,6 +31,7 @@ a.btn-floating {
 /* HEADER */
 header {
   height: 6rem;
+  height: 90px;
   width: 100%;
   border-radius: 5px;
   opacity: 0;
@@ -48,6 +49,13 @@ header nav {
   align-items: center;
 }
 
+.tracking-controls {
+  width: 420px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
 .controls-container {
   width: 80%;
   display: flex;
@@ -57,12 +65,9 @@ header nav {
   width: 13rem;
   padding-top: 10px;
   border-bottom: 1px solid black;
-  margin-right: 3rem;
+  /*margin-right: 3rem;*/
 }
 
-.controls-container label {
-  color: white;
-}
 
 .controls-container .btn {
   border-radius: 50%;
@@ -128,7 +133,6 @@ input[type="checkbox"].filled-in:checked + label:after{
 .menu-toggle {
   position: fixed;
   top: -12px;
-  /*left: 43%;*/
   right: 155px;
   padding: 0.5rem;
   background: #b71c1c;
@@ -140,12 +144,74 @@ input[type="checkbox"].filled-in:checked + label:after{
   padding-top: 15px;
   padding-bottom: 0.5px;
   border-top: 0;
+  height: 35px;
 }
 
 #favorite-preset-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 22px;
-  margin-right: 45px;
+  width: 50%;
+}
+
+.favorite-container {
+  height: 100%;
+  width: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    padding-left: 17rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 91px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .controls-container p {
+    font-size: 0.9rem;
+  }
+  .controls-container i {
+    font-size: 1.8rem !important;
+  }
+  .controls-container {
+    width: 20%;
+    border-bottom: 0;
+  }
+  .tracking-controls {
+    justify-content: space-around;
+    width: 320px;
+  }
+  header {
+    padding-left: 13rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .tracking-controls {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  header {
+    padding-left: 9rem;
+  }
+  .controls-container p.select-text {
+    display: none;
+  }
+  hgroup h3 {
+    font-size: 2rem;
+  }
 }

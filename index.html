@@ -53,24 +53,27 @@
     <button class="menu-toggle">Controls</button>
     <header class="z-depth-2">
       <nav>
-        <div class="controls-container">
-          <a href="#" id="previous-color">
-            <i class="material-icons waves-effect">skip_previous</i>
-          </a>
-          <p for="color-skip">Select Colors</p>
-          <a href="#" id="next-color">
-            <i class="material-icons waves-effect">skip_next</i>
-          </a>
-        </div>
+        <div class="tracking-controls">
+          <div class="controls-container">
+            <a href="#" id="previous-color">
+              <i class="material-icons waves-effect">skip_previous</i>
+            </a>
+            <p class="select-text">Select</p> <p>&nbsp;Colors</p>
+            <a href="#" id="next-color">
+              <i class="material-icons waves-effect">skip_next</i>
+            </a>
+          </div>
 
-        <div class="controls-container" id="pattern-select-container">
-          <a href="#" id="previous-pattern" class="disabled">
-            <i class="material-icons waves-effect">skip_previous</i>
-          </a>
-          <p for="color-skip">Select Pattern</p>
-          <a href="#" id="next-pattern">
-            <i class="material-icons waves-effect">skip_next</i>
-          </a>
+
+          <div class="controls-container" id="pattern-select-container">
+            <a href="#" id="previous-pattern" class="disabled">
+              <i class="material-icons waves-effect">skip_previous</i>
+            </a>
+            <p class="select-text">Select</p> <p>&nbsp;Pattern</p>
+            <a href="#" id="next-pattern">
+              <i class="material-icons waves-effect">skip_next</i>
+            </a>
+          </div>
         </div>
 
         <div class="checkbox-container">
@@ -87,9 +90,11 @@
           </p>
         </div>
 
-        <a class="btn grey waves-effect" id="favorite-preset-btn">
-          <i class="material-icons">star</i>
-        </a>
+        <div class="favorite-container">
+          <a class="btn grey waves-effect" id="favorite-preset-btn">
+            <i class="material-icons">star</i>
+          </a>
+        </div>
       </nav>
     </header>
     <a id="pause-btn" class="btn-floating btn-large waves-effect red darken-3 z-depth-4">
