@@ -4,7 +4,8 @@ function PatternCheckbox() {
     'patternSelect',
     'styleManager',
     'stateManager',
-    'patternFetch'
+    'patternFetch',
+    'favoritesManager'
   ];
 
   let $checkbox = $('#pattern-checkbox');
@@ -31,7 +32,9 @@ function PatternCheckbox() {
     let checked = this.stateManager.getUIState().includePattern;
     if (checked) {
       this.patternFetch.getFourPatternsAndStore().then(() => {
-        app.styleManager.switchNextPattern();
+        if (!this.favoritesManager.showingFavorite) {
+          app.styleManager.switchNextPattern();
+        }
       });
       $checkbox.attr('checked', true);
       $checkbox.trigger('change');

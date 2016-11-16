@@ -5,8 +5,18 @@ function StyleManager() {
     'painter',
     'backgroundImage',
     'globalStyles',
-    'headings'
+    'headings',
+    'favoritesManager'
   ];
+
+  this.showFavorite = function() {
+    let favorite = this.favoritesManager.getRandomFavorite();
+    let colors = favorite.colors;
+    let pattern = favorite.pattern;
+    this.painter.changeColors(colors);
+    this.backgroundImage.switchNewPattern(pattern);
+    this.painter.paint();
+  }
 
   this.switchNextColors = function() {
     let next = this.styleStorage.giveNextColors();
@@ -24,6 +34,7 @@ function StyleManager() {
     let url = this.styleStorage.giveNextPatternStorage();
     this.backgroundImage.switchNewPattern(url);
   }
+
 
   this.switchPreviousPattern = function() {
     let url = this.styleStorage.givePreviousPatternStorage();

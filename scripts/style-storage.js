@@ -75,4 +75,11 @@ function StyleStorage() {
     return result;
   }
 
+  this.embedFavorite = function(favorite) {
+    let colors = favorite.colors;
+    let pattern = favorite.pattern;
+    console.log(pattern);
+    console.log(colors);
+  }
+
 }

@@ -3,10 +3,16 @@ function FavoritesManager() {
   this.imports = [
     'favoritesPackager',
     'favoriteButton',
-    'localStorage'
+    'localStorage',
+    'styleStorage'
   ];
 
   this.favorites = [];
+  this.showingFavorite = false;
+
+  this.initializeComponent = function() {
+    this.retrieveLocalFavorites();
+  }
 
   this.saveFavorite = function() {
     let current = this.getCurrent();
@@ -31,6 +37,9 @@ function FavoritesManager() {
 
   this.retrieveLocalFavorites = function() {
     let localFavoritesJSON = this.localStorage.getFavorites();
+    if (!localFavoritesJSON) {
+      return;
+    }
     let localFavorites = this.favoritesPackager.parseFavorites(localFavoritesJSON);
     this.favorites = this.favorites.concat(localFavorites);
   }
@@ -39,6 +48,25 @@ function FavoritesManager() {
     return this.favoritesPackager.packageCurrent();
   }
 
+  this.getRandomFavorite = function() {
+    let random = Math.floor(Math.random() * this.favorites.length);
+    return this.favorites[random];
+  }
 
+  this.showFavorite = function() {
+    let result = false;
+    if (this.favorites.length) {
+      result = coinFlip()
+    }
+    if (result) {
+      this.showingFavorite = true;
+    }
+    return result;
+  }
+
+  function coinFlip() {
+    let random = Math.floor(Math.random() * 10);
+    return random > 6;
+  }
 
 }

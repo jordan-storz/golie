@@ -8,7 +8,12 @@ app.gameMaker.initialize();
 app.gameMaker.createInstance();
 app.stateManager.getLocalUIState();
 app.stateManager.getLocalColors().then(() => {
-  app.styleManager.switchNextColors();
+  if (app.favoritesManager.showFavorite()) {
+    // console.log('SHOWING FAVORITE');
+    app.styleManager.showFavorite();
+  } else {
+    app.styleManager.switchNextColors();
+  }
   app.runner.run();
   app.runner.pause();
 })
