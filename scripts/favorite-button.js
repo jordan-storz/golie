@@ -24,6 +24,10 @@ function FavoriteButton() {
 
   function saveFavorite() {
     this.favoritesManager.saveFavorite();
-    this.beGold()
+    let isCurrentFavorite = this.favoritesManager.senseFavorite();
+    console.log(isCurrentFavorite);
+    if (isCurrentFavorite) {
+      this.beGold();
+    }
   }
 }
