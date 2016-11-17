@@ -4,7 +4,7 @@ function PatternFetch() {
     'styleStorage'
   ];
 
-  const PATTERN_ENDPOINT = 'http://www.colourlovers.com/api/patterns/random';
+  const PATTERN_ENDPOINT = 'https://www.colourlovers.com/api/patterns/random';
 
   this.getRandomPattern = function() {
     return $.ajax({

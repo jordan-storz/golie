@@ -33,7 +33,14 @@ function StateManager() {
 
   this.getLocalUIState = function() {
     let localUI = this.localStorage.getUI();
-    stateUI = localUI;
+    if (!localUI) {
+      stateUI = {
+        dim: false,
+        includePattern: true
+      }
+    } else {
+      stateUI = localUI;
+    }
     return localUI;
   }
 

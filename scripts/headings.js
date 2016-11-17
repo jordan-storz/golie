@@ -9,7 +9,7 @@ function Headings() {
   let darkMode = false;
 
   let defaultColor = '#000';
-  
+
   this.initializeComponent = function() {
     let dim = this.stateManager.getUIState().dim;
   }

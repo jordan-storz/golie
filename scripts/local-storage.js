@@ -7,6 +7,8 @@ function LocalStorage() {
 
   this.get = function(property) {
     let result = window.localStorage.getItem(property);
+    console.log('local result');
+    console.log(result);
     return result;
   }
 

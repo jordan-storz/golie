@@ -5,7 +5,7 @@ function ColorFetch() {
     'localStorage'
   ];
 
-  const COLOR_ENDPOINT = 'http://www.colourlovers.com/api/palettes/random';
+  const COLOR_ENDPOINT = 'https://www.colourlovers.com/api/palettes/random';
 
   this.getRandomScheme = function() {
     return $.ajax({
