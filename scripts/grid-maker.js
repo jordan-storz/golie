@@ -5,14 +5,7 @@ function GridMaker() {
     'environmentInfo'
   ];
 
-  var dimension = 4;
-
-  this.initialize = function(size) {
-    dimension = size;
-    this.elementStorage.loadDimension(dimension)
-    this.environmentInfo.setDimension(dimension);
-  }
-
+  var dimension = 14;
   var $body = $('body');
   var $main = $('main');
 
@@ -74,5 +67,11 @@ function GridMaker() {
 
   this.renderGrid = function() {
     this.insert$Cells();
+  }
+
+  this.initialize = function(size) {
+    dimension = size;
+    this.elementStorage.loadDimension(dimension)
+    this.environmentInfo.setDimension(dimension);
   }
 }

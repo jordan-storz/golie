@@ -3,7 +3,6 @@ function GameMaker() {
   this.imports = [
     'instanceStorage',
     'environmentInfo',
-    'stylist'
   ];
 
   let dimension;
@@ -14,7 +13,6 @@ function GameMaker() {
 
   this.createInstance = function() {
     let matrix = [];
-    let color = this.stylist.pickColor();
     for (let i = 0; i < dimension; i++) {
       matrix.push([]);
       for (let j = 0; j < dimension; j++) {
@@ -24,8 +22,7 @@ function GameMaker() {
       }
     }
     let instance = {
-      lifeMatrix: matrix,
-      color: color
+      lifeMatrix: matrix
     }
     this.instanceStorage.store(instance);
   }

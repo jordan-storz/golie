@@ -3,23 +3,25 @@ function Bootstrap() {
   var injector = new Injector();
 
   var components = [
-    StateManager,
-    StyleManager,
-    BackgroundImage,
-    Runner,
+    EnvironmentInfo,
     GridMaker,
     GameMaker,
     LifeTransformer,
-    Stylist,
+    StateManager,
+    StyleManager,
+    Runner,
     Painter,
     ElementStorage,
     InstanceStorage,
-    EnvironmentInfo,
+    StyleStorage,
     NeighborCalculator,
     ColorFetch,
-    StyleStorage,
     PatternFetch,
     GlobalStyles,
+    LocalStorage,
+    FavoritesManager,
+    FavoritesPackager,
+    FavoriteButton,
     PauseButton,
     ToggleMenuButton,
     Header,
@@ -28,11 +30,8 @@ function Bootstrap() {
     PatternSelect,
     PatternCheckbox,
     DimmerCheckbox,
-    LocalStorage,
-    FavoriteButton,
-    FavoritesManager,
-    FavoritesPackager
-  ]
+    BackgroundImage,
+  ];
 
   function registerComponents() {
     components.forEach(component => injector.create(component));
