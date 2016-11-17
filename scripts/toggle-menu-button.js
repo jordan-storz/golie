@@ -9,11 +9,11 @@ function ToggleMenuButton() {
   this.activated = false;
 
   let $button = $('.menu-toggle');
-  
+
   this.initializeComponent = function() {
     this.activated = false;
     $button.click(onClick.bind(this));
-    // $('document').ready(onClick.bind(this));
+    $('document').ready(onClick.bind(this));
   }
 
   function onClick(event) {

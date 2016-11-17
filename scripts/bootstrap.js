@@ -31,6 +31,7 @@ function Bootstrap() {
     PatternCheckbox,
     DimmerCheckbox,
     BackgroundImage,
+    Revitalizer
   ];
 
   function registerComponents() {

@@ -3,7 +3,8 @@ function Painter() {
   this.imports = [
     'elementStorage',
     'instanceStorage',
-    'globalStyles'
+    'globalStyles',
+    'revitalizer'
   ];
 
   let colorScheme = [];
@@ -31,6 +32,7 @@ function Painter() {
 
 
   this.paint = function() {
+    let deadCellCount = 0;
     let instances = this.instanceStorage.getStorage();
     instances.forEach((instance) => {
       let matrix = instance.lifeMatrix;
@@ -42,10 +44,13 @@ function Painter() {
             addBackground($cell, color);
           } else {
             clearBackgrounds.apply(this, [$cell]);
+            deadCellCount += 1;
           }
         });
       });
     });
+    this.revitalizer.assessDeadCellCount(deadCellCount);
+    deadCellCount = 0;
   }
 
   this.changeColors = function(colorArray) {

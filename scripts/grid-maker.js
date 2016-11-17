@@ -2,7 +2,8 @@ function GridMaker() {
 
   this.imports = [
     'elementStorage',
-    'environmentInfo'
+    'environmentInfo',
+    'revitalizer'
   ];
 
   var dimension = 14;
@@ -73,5 +74,6 @@ function GridMaker() {
     dimension = size;
     this.elementStorage.loadDimension(dimension)
     this.environmentInfo.setDimension(dimension);
+    this.revitalizer.initialize();
   }
 }

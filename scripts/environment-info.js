@@ -1,8 +1,8 @@
 function EnvironmentInfo() {
 
-  let DIMENSION;
+  let dimension;
 
-  this.setDimension = (val) => DIMENSION = val;
-  this.getDimension = () => DIMENSION;
-  
+  this.setDimension = (val) => dimension = val;
+  this.getDimension = () => dimension;
+
 }

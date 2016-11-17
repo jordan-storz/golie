@@ -4,7 +4,7 @@ function InstanceStorage() {
 
   let storage = [];
 
-  this.store = instance => storage.push(instance);
+  this.store = instance => storage[0] = instance;
 
   this.getStorage = () => storage;
 

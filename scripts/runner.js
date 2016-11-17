@@ -3,7 +3,8 @@ function Runner() {
   this.imports = [
     'gameMaker',
     'lifeTransformer',
-    'painter'
+    'painter',
+    'revitalizer'
   ];
 
   function turn() {
