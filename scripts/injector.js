@@ -13,7 +13,6 @@ function Injector() {
     return name[0].toLowerCase() + name.slice(1);
   }
 
-
   this.create = function(Component) {
     var instanceName = camelCaseName(Component);
     for (var key in registry) {

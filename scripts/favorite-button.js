@@ -7,7 +7,6 @@ function FavoriteButton() {
   let $button = $('#favorite-preset-btn');
   let $icon = $('#favorite-preset-btn i');
 
-
   this.initializeComponent = function() {
     let self = this;
     $button.click(saveFavorite.bind(this));
@@ -38,6 +37,4 @@ function FavoriteButton() {
     }
     this.senseFavorite();
   }
-
-
 }

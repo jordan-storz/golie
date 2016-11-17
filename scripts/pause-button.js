@@ -33,10 +33,10 @@ function PauseButton() {
     this.togglePaused();
   }
 
-  this.initialize = (function initialize(self) {
+  this.initializeComponent = function() {
     showPauseIcon();
-    $button.click(onClick.bind(self));
-  })(this);
+    $button.click(onClick.bind(this));
+  }
 
   this.togglePaused = () => this.paused = !this.paused;
 

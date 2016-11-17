@@ -10,10 +10,10 @@ function PatternSelect() {
   let $next = $('#next-pattern');
   let $previous = $('#previous-pattern');
 
-  this.initialize = (function(self) {
-    $next.click(nextPattern.bind(self));
-    $previous.click(previousPattern.bind(self));
-  })(this);
+  this.initializeComponent = function() {
+    $next.click(nextPattern.bind(this));
+    $previous.click(previousPattern.bind(this));
+  }
 
   function nextPattern() {
     if (this.disabled) {

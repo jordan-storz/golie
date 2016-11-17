@@ -1,7 +1,6 @@
 function NeighborCalculator() {
 
   this.imports = [
-    'instanceStorage',
     'environmentInfo'
   ];
 
@@ -24,7 +23,6 @@ function NeighborCalculator() {
     let yyPass = (yy >= 0 && yy < dimension);
     return xxPass && yyPass;
   }
-
 
   this.aliveNeighbors = function(instance, x, y) {
     return this.allNeighbors(instance, x, y).filter((neighbor) => {

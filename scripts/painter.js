@@ -8,8 +8,6 @@ function Painter() {
 
   let colorScheme = [];
 
-  this.getColorScheme = () => colorScheme;
-
   function clearBackgrounds($cell) {
     let backgroundColor = this.globalStyles.getBackgroundColor();
     $cell.css({
@@ -21,7 +19,7 @@ function Painter() {
   function addBackground($cell, color) {
     $cell.css({
       backgroundColor: color,
-      opacity: 0.5
+      opacity: 0.6
     });
   }
 
@@ -53,9 +51,4 @@ function Painter() {
   this.changeColors = function(colorArray) {
     colorScheme = colorArray;
   }
-
-
-
-
-
 }

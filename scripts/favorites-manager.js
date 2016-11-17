@@ -22,7 +22,6 @@ function FavoritesManager() {
 
   this.removeFavorite = function() {
     let current = this.getCurrent();
-    console.log(current);
     this.favorites.forEach((favorite, index) => {
       if (favorite.pattern === current.pattern) {
         for (let i = 0; i < favorite.colors.length; i++) {
@@ -30,7 +29,6 @@ function FavoritesManager() {
             return;
           }
         }
-        console.log('removing favorite');
         this.favorites.splice(index, 1);
         this.localStorage.refreshFavorites(this.favorites);
       }
@@ -85,5 +83,4 @@ function FavoritesManager() {
     let random = Math.floor(Math.random() * 10);
     return random > 5;
   }
-
 }

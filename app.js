@@ -2,7 +2,7 @@ var bootstrap = new Bootstrap();
 var app = {};
 
 bootstrap.go(app);
-app.gridMaker.initialize(17);
+app.gridMaker.initialize(16);
 app.gridMaker.renderGrid();
 app.gameMaker.initialize();
 app.gameMaker.createInstance();

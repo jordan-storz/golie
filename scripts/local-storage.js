@@ -5,10 +5,6 @@ function LocalStorage() {
     'favoritesPackager'
   ];
 
-  this.initialize = (function(self) {
-
-  })(this);
-
   this.get = function(property) {
     let result = window.localStorage.getItem(property);
     return result;
@@ -57,6 +53,4 @@ function LocalStorage() {
   this.getFavorites = function() {
     return this.get('favorites');
   }
-
-
 }

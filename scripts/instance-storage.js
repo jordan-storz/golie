@@ -8,13 +8,4 @@ function InstanceStorage() {
 
   this.getStorage = () => storage;
 
-  this.clearStorage = (confirmBool) => {
-    if (confirmBool) {
-      storage = [];
-    } else {
-      throw(new Error("InstanceStorage#clearStorage requires a boolean confirmation"));
-    }
-  }
-
-
 }

@@ -6,9 +6,6 @@ function Header() {
 
   let $header = $('header');
 
-  this.initialize = (function(self) {
-  })(this);
-
   this.activate = function() {
     $header.animate({
       opacity: 1

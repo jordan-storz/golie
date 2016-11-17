@@ -70,5 +70,4 @@ function ColorFetch() {
        localStorage.setColors(arr);
      });
   }
-
 }

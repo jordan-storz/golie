@@ -8,10 +8,10 @@ function ColorSelect() {
   let $previous = $('#previous-color');
   let $next = $('#next-color');
 
-  this.initialize = (function(self) {
-    $next.click(nextColor.bind(self));
-    $previous.click(previousColor.bind(self));
-  })(this);
+  this.initializeComponent = function() {
+    $next.click(nextColor.bind(this));
+    $previous.click(previousColor.bind(this));
+  }
 
   function nextColor() {
     this.styleManager.switchNextColors();
