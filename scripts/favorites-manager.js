@@ -83,7 +83,7 @@ function FavoritesManager() {
 
   function coinFlip() {
     let random = Math.floor(Math.random() * 10);
-    return random > 1;
+    return random > 5;
   }
 
 }
