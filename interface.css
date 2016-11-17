@@ -243,10 +243,3 @@ input[type="checkbox"].filled-in:checked + label:after{
     left: 5%;
   }
 }
-
-@media screen and (max-width: 480px) {
-
-  header nav {
-    /*justify-content: space-around;*/
-  }
-}
