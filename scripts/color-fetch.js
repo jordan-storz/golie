@@ -5,18 +5,10 @@ function ColorFetch() {
     'localStorage'
   ];
 
-  const COLOR_ENDPOINT = 'https://www.colourlovers.com/api/palettes/random';
+  const COLOR_ENDPOINT = 'https://galvanize-cors-proxy.herokuapp.com/colourlovers.com/api/palettes/random?format=json';
 
   this.getRandomScheme = function() {
-    return $.ajax({
-      url: COLOR_ENDPOINT,
-      jsonp: 'jsonCallback',
-      dataType: 'jsonp',
-      data: {
-        format: 'json'
-      },
-      success: () => {}
-    });
+    return $.get(COLOR_ENDPOINT);
   }
 
   this.getFourSchemesAndStore = function() {

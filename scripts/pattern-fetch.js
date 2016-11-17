@@ -4,18 +4,10 @@ function PatternFetch() {
     'styleStorage'
   ];
 
-  const PATTERN_ENDPOINT = 'https://www.colourlovers.com/api/patterns/random';
+  const PATTERN_ENDPOINT = 'https://galvanize-cors-proxy.herokuapp.com/colourlovers.com/api/patterns/random?format=json';
 
   this.getRandomPattern = function() {
-    return $.ajax({
-      url: PATTERN_ENDPOINT,
-      jsonp: 'jsonCallback',
-      dataType: 'jsonp',
-      data: {
-        format: 'json'
-      },
-      success: () => {}
-    });
+    return $.get(PATTERN_ENDPOINT);
   }
 
   this.getPatternAndStore = function() {
