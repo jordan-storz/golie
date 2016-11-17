@@ -1,4 +1,4 @@
-function Revitalizer() {
+ function Revitalizer() {
 
   this.imports = [
     'gameMaker',
@@ -28,7 +28,6 @@ function Revitalizer() {
   this.revitalize = function() {
     deadCellCounts = [0, 0, 0];
     this.gameMaker.createInstance();
-    console.log('revitsalized');
   }
 
 }
