@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="interface.css">
     <style>
     body {
-
     }
     main {
       width: 100%;
@@ -31,12 +30,10 @@
       z-index: -1;
       display: none;
     }
-
     /* For making a perfect square */
     /*.cell {
   width: 50%;
 }
-
 .cell:after {
   content: "";
   display: block;
@@ -53,43 +50,49 @@
     <button class="menu-toggle">Controls</button>
     <header class="z-depth-2">
       <nav>
-        <div class="controls-container">
-          <a href="#" id="previous-color">
-            <i class="material-icons waves-effect">skip_previous</i>
-          </a>
-          <p for="color-skip">Select Colors</p>
-          <a href="#" id="next-color">
-            <i class="material-icons waves-effect">skip_next</i>
-          </a>
+        <div class="tracking-controls">
+          <div class="controls-container">
+            <a href="#" id="previous-color">
+              <i class="material-icons waves-effect">skip_previous</i>
+            </a>
+            <p class="select-text">Select</p> <p>&nbsp;Colors</p>
+            <a href="#" id="next-color">
+              <i class="material-icons waves-effect">skip_next</i>
+            </a>
+          </div>
+          <div class="controls-container" id="pattern-select-container">
+            <a href="#" id="previous-pattern" class="disabled">
+              <i class="material-icons waves-effect">skip_previous</i>
+            </a>
+            <p class="select-text">Select</p> <p>&nbsp;Pattern</p>
+            <a href="#" id="next-pattern">
+              <i class="material-icons waves-effect">skip_next</i>
+            </a>
+          </div>
         </div>
 
-        <div class="controls-container" id="pattern-select-container">
-          <a href="#" id="previous-pattern" class="disabled">
-            <i class="material-icons waves-effect">skip_previous</i>
+
+        <div class="checkbox-controls">
+          <div class="checkbox-container">
+            <p>
+              <input type="checkbox" class="filled-in" id="pattern-checkbox" checked="checked" />
+              <label for="pattern-checkbox">Include Pattern</label>
+            </p>
+          </div>
+
+          <div class="checkbox-container dimmer-container">
+            <p>
+              <input type="checkbox" class="filled-in" id="dimmer-checkbox" />
+              <label for="dimmer-checkbox">Dim</label>
+            </p>
+          </div>
+        </div>
+
+        <div class="favorite-container">
+          <a class="btn grey waves-effect" id="favorite-preset-btn">
+            <i class="material-icons">star</i>
           </a>
-          <p for="color-skip">Select Pattern</p>
-          <a href="#" id="next-pattern">
-            <i class="material-icons waves-effect">skip_next</i>
-          </a>
         </div>
-
-        <div class="checkbox-container">
-          <p>
-            <input type="checkbox" class="filled-in" id="pattern-checkbox" checked="checked" />
-            <label for="pattern-checkbox">Include Pattern</label>
-          </p>
-        </div>
-
-        <div class="checkbox-container dimmer-container">
-          <p>
-            <input type="checkbox" class="filled-in" id="dimmer-checkbox" />
-            <label for="dimmer-checkbox">Dim</label>
-          </p>
-        </div>
-
-        <a class="btn grey waves-effect" id="favorite-preset-btn">
-          <i class="material-icons">star</i>
-        </a>
       </nav>
     </header>
     <a id="pause-btn" class="btn-floating btn-large waves-effect red darken-3 z-depth-4">

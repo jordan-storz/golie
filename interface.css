@@ -56,6 +56,11 @@ header nav {
   justify-content: space-between;
 }
 
+.checkbox-controls {
+  width: 400px;
+  display: flex;
+}
+
 .controls-container {
   width: 80%;
   display: flex;
@@ -191,27 +196,57 @@ input[type="checkbox"].filled-in:checked + label:after{
     width: 320px;
   }
   header {
-    padding-left: 13rem;
+    padding-left: 16rem;
   }
-}
-
-@media screen and (max-width: 920px) {
-  .tracking-controls {
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 25%;
+  header nav {
+    justify-content: space-between;
+  }
+  .checkbox-controls {
+    position: absolute;
+    bottom: 4px;
+    left: 33%;
   }
 }
 
 @media screen and (max-width: 715px) {
   header {
-    padding-left: 9rem;
+    padding-left: 14rem;
   }
   .controls-container p.select-text {
     display: none;
   }
   hgroup h3 {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #pattern-select-container {
+    margin-left: -95px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  header nav {
+    padding-right: 1rem;
+  }
+  .tracking-controls {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+  }
+  #pattern-select-container {
+    margin-left: 0;
+  }
+  .checkbox-controls {
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  header nav {
+    /*justify-content: space-around;*/
   }
 }
