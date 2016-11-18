@@ -3,7 +3,10 @@
 
   "name": "Golie Visual",
   "description": "This extension provides a colorful visualizer for new tabs.",
-  "version": "1.3",
+  "browser_actions": {
+    "default_icon": "golie-icon.png"
+  },
+  "version": "1.5",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },

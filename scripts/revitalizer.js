@@ -29,5 +29,4 @@
     deadCellCounts = [0, 0, 0];
     this.gameMaker.createInstance();
   }
-
 }

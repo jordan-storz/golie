@@ -7,7 +7,7 @@ function StateManager() {
   ];
 
   let stateUI = {
-    dim: false,
+    dim: true,
     includePattern: true
   }
 
