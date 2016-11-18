@@ -14,4 +14,5 @@ While maintaining a elegant interface, Golie can definitely include additional f
 - Helpful hints to guide new users.
 - A FAQ-style guide.
 - A more robust favorites-interface (load a favorite on demand).
+
 #### I am open to other advanced features and welcome pull requests.
