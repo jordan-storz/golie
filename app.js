@@ -1,20 +1,20 @@
 var bootstrap = new Bootstrap();
-var app = {};
+var engine = {};
 
-bootstrap.go(app);
-app.gridMaker.initialize(16);
-app.gridMaker.renderGrid();
-app.gameMaker.initialize();
-app.gameMaker.createInstance();
-app.stateManager.getLocalUIState();
-app.stateManager.getLocalColors().then(() => {
-  if (app.favoritesManager.showFavorite()) {
-    app.styleManager.showFavorite();
-    app.favoriteButton.beGold();
+bootstrap.go(engine);
+engine.gridMaker.initialize(16);
+engine.gridMaker.renderGrid();
+engine.gameMaker.initialize();
+engine.gameMaker.createInstance();
+engine.stateManager.getLocalUIState();
+engine.stateManager.getLocalColors().then(() => {
+  if (engine.favoritesManager.showFavorite()) {
+    engine.styleManager.showFavorite();
+    engine.favoriteButton.beGold();
 
   } else {
-    app.styleManager.switchNextColors();
+    engine.styleManager.switchNextColors();
   }
-  app.runner.run();
-  // app.runner.pause();
+  engine.runner.run();
+  // engine.runner.pause();
 })

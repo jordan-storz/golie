@@ -2,7 +2,8 @@ function ColorFetch() {
 
   this.imports = [
     'styleStorage',
-    'localStorage'
+    'localStorage',
+    'monoColor'
   ];
 
   const COLOR_ENDPOINT = 'https://galvanize-cors-proxy.herokuapp.com/colourlovers.com/api/palettes/random?format=json';
@@ -25,6 +26,9 @@ function ColorFetch() {
          let colorArray = dataset[0][0].colors;
          styleStorage.storeColor(colorArray);
        });
+     })
+     .catch((err) => {
+       this.monoColor.createFourAndStore();
      });
   }
 
@@ -42,7 +46,12 @@ function ColorFetch() {
          let colorArray = dataset[0][0].colors;
          styleStorage.unshiftColor(colorArray);
        });
-     });
+     })
+     .catch((err) => {
+       .catch((err) => {
+         this.monoColor.createFourAndUnshift();
+       });
+     })
   }
 
   this.getFourAndLocalStore = function() {
