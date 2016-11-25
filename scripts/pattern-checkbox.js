@@ -33,7 +33,7 @@ function PatternCheckbox() {
     if (checked) {
       this.patternFetch.getFourPatternsAndStore().then(() => {
         if (!this.favoritesManager.showingFavorite) {
-          app.styleManager.switchNextPattern();
+          this.styleManager.switchNextPattern();
         }
       });
       $checkbox.attr('checked', true);

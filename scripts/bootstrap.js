@@ -32,7 +32,8 @@ function Bootstrap() {
     DimmerCheckbox,
     BackgroundImage,
     Revitalizer,
-    MonoColor
+    MonoColor,
+    StarHelper
   ];
 
   function registerComponents() {
