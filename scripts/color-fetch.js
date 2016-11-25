@@ -48,9 +48,7 @@ function ColorFetch() {
        });
      })
      .catch((err) => {
-       .catch((err) => {
-         this.monoColor.createFourAndUnshift();
-       });
+       this.monoColor.createFourAndUnshift();
      })
   }
 
