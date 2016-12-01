@@ -6,12 +6,14 @@ function Headings() {
 
   let $headings = $('hgroup');
   let lightened;
+  let hidden;
   let darkMode = false;
 
   let defaultColor = '#000';
 
   this.initializeComponent = function() {
     let dim = this.stateManager.getUIState().dim;
+    hidden = this.stateManager.getUIState().hideTitle;
   }
 
   function toggleLightened() {
@@ -19,8 +21,8 @@ function Headings() {
   }
 
   this.toggleColor = function() {
-    let color = lightened ? defaultColor : '#FFF';
-    toggleLightened()
+    let color = lightened ? hidden ? 'rgba(0,0,0,0)' : defaultColor : '#FFF';
+    toggleLightened();
     $headings.animate({
       top: '10',
       color: color
@@ -35,5 +37,13 @@ function Headings() {
   this.darkModeOff = function() {
     defaultColor = '#000';
     this.toggleColor();
+  }
+
+  this.showTitle = function () {
+    hidden = false; 
+  }
+
+  this.hideTitle = function () {
+    hidden = true; 
   }
 }

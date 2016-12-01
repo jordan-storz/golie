@@ -29,6 +29,7 @@ function Bootstrap() {
     ColorSelect,
     PatternSelect,
     PatternCheckbox,
+    TitleCheckbox,
     DimmerCheckbox,
     BackgroundImage,
     Revitalizer
