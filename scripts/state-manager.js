@@ -10,7 +10,7 @@ function StateManager() {
     dim: true,
     includePattern: true,
     newUser: true,
-    useCount: 0
+    useCount: 0,
     hideTitle: false
   }
 
@@ -41,7 +41,7 @@ function StateManager() {
         dim: false,
         includePattern: true,
         newUser: true,
-        useCount: 0
+        useCount: 0,
         hideTitle: false
       }
     } else {

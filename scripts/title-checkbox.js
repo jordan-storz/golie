@@ -15,6 +15,7 @@ function TitleCheckbox() {
         styleManager.hideTitle();
         stateManager.saveUIProperty('hideTitle', true);
       } else {
+        console.log('SHOW TITLE');
         styleManager.showTitle();
         stateManager.saveUIProperty('hideTitle', false);
       }

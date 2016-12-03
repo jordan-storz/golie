@@ -14,6 +14,11 @@ function Headings() {
   this.initializeComponent = function() {
     let dim = this.stateManager.getUIState().dim;
     hidden = this.stateManager.getUIState().hideTitle;
+    if (hidden) {
+      this.hideTitle();
+    } else {
+      this.showTitle();
+    }
   }
 
   function toggleLightened() {
@@ -40,10 +45,10 @@ function Headings() {
   }
 
   this.showTitle = function () {
-    hidden = false; 
+    hidden = false;
   }
 
   this.hideTitle = function () {
-    hidden = true; 
+    hidden = true;
   }
 }
