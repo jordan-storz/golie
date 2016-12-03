@@ -81,4 +81,12 @@ function StyleManager() {
     this.headings.darkModeOn();
     this.headings.toggleColor();
   }
+
+  this.showTitle = function () {
+    this.headings.showTitle();
+  }
+
+  this.hideTitle = function () {
+    this.headings.hideTitle();
+  }
 }

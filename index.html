@@ -86,7 +86,19 @@
               <label for="dimmer-checkbox">Dim</label>
             </p>
           </div>
+
+          <div class="checkbox-container dimmer-container">
+            <p>
+              <input type="checkbox" class="filled-in" id="title-checkbox" />
+              <label for="title-checkbox">Hide Title</label>
+            </p>
+          </div>
         </div>
+
+        <a id="pause-btn" class="btn-floating btn-large waves-effect red darken-3 z-depth-4">
+          <i class="material-icons pause-icon">pause</i>
+          <i class="material-icons play-icon">play_arrow</i>
+        </a>
 
         <div class="favorite-container">
           <a class="btn grey waves-effect" id="favorite-preset-btn">
@@ -95,10 +107,6 @@
         </div>
       </nav>
     </header>
-    <a id="pause-btn" class="btn-floating btn-large waves-effect red darken-3 z-depth-4">
-      <i class="material-icons pause-icon">pause</i>
-      <i class="material-icons play-icon">play_arrow</i>
-    </a>
     <main></main>
   </body>
   <script src="vendor/jquery-3.1.1.min.js"></script>
@@ -113,6 +121,7 @@
   <script src="scripts/local-storage.js"></script>
   <script src="scripts/favorite-button.js"></script>
   <script src="scripts/dimmer-checkbox.js"></script>
+  <script src="scripts/title-checkbox.js"></script>
   <script src="scripts/pattern-checkbox.js"></script>
   <script src="scripts/pattern-select.js"></script>
   <script src="scripts/color-select.js"></script>

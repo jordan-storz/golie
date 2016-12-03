@@ -11,6 +11,7 @@ function StateManager() {
     includePattern: true,
     newUser: true,
     useCount: 0
+    hideTitle: false
   }
 
   this.getLocalColors = function() {
@@ -41,6 +42,7 @@ function StateManager() {
         includePattern: true,
         newUser: true,
         useCount: 0
+        hideTitle: false
       }
     } else {
       stateUI = localUI;
